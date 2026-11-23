@@ -1,0 +1,149 @@
+/* 1. :root -> Define variables globales del documento */
+:root {
+    --color-nav: #372E2D;
+    --color-main: #5C423E;
+    --color-section: #AF4C3C;
+    --color-aside: #C9958D;
+    --color-footer: #FF7E6A;
+    --color-accent: #FFD166;
+    --color-focus: #06D6A0;
+    --color-target: #FFEE88;
+    --transicion-suave: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+}
+
+nav { background-color: var(--color-nav); transition: var(--transicion-suave); }
+main { background-color: var(--color-main); transition: var(--transicion-suave); }
+section { background-color: var(--color-section); transition: var(--transicion-suave); }
+
+aside {
+    background-color: var(--color-aside);
+    color: #1a1a1a;
+    transition: var(--transicion-suave);
+}
+aside h5, aside p { color: #1a1a1a !important; }
+
+footer {
+    background-color: var(--color-footer);
+    color: #1a1a1a;
+    transition: var(--transicion-suave);
+}
+footer h4, footer p { color: #1a1a1a !important; }
+
+.altura { min-height: 200px; height: auto; }
+
+/* 2. :any-link */
+:any-link { text-decoration: none; font-weight: 600; }
+
+/* 3. :link */
+a.demo-link:link { color: #48CAE4; border-bottom: 2px dashed #48CAE4; }
+
+/* 4. :visited */
+a.demo-visited:visited { color: #DDA15E; text-decoration: underline wavy #DDA15E; }
+
+.nav-btn {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    transition: var(--transicion-suave);
+}
+
+/* 5. :hover */
+nav:hover { filter: brightness(1.15); }
+main:hover { filter: brightness(1.1); }
+section:hover, aside:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+footer:hover { background-color: #ff644e; }
+.nav-btn:hover { background-color: var(--color-accent); color: #111 !important; transform: scale(1.05); }
+
+/* 6. :active */
+.nav-btn:active, .btn-interactive:active, .btn-press:active {
+    transform: scale(0.94) !important;
+    filter: brightness(0.85);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-press {
+    background-color: #2B2D42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: var(--transicion-suave);
+}
+
+/* 7. :focus */
+.custom-input:focus {
+    background-color: #ffffff;
+    color: #111;
+    border: 2px solid var(--color-focus);
+    box-shadow: 0 0 12px rgba(6, 214, 160, 0.6);
+    outline: none;
+}
+
+/* 8. :focus-visible */
+.btn-keyboard:focus-visible {
+    outline: 4px solid var(--color-accent) !important;
+    outline-offset: 4px;
+    background-color: #000;
+    color: var(--color-accent) !important;
+}
+
+/* 9. :focus-within */
+.search-box:focus-within {
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid var(--color-focus);
+    box-shadow: 0 0 18px rgba(6, 214, 160, 0.4);
+    transform: scale(1.02);
+}
+
+.aside-focus-box:focus-within {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 10. :target */
+section:target {
+    border: 4px solid var(--color-target) !important;
+    background-color: #7A281E !important;
+    box-shadow: 0 0 25px rgba(255, 238, 136, 0.9);
+    animation: pulsoTarget 1.5s infinite alternate;
+}
+
+@keyframes pulsoTarget {
+    from { transform: scale(1); }
+    to { transform: scale(1.03); }
+}
+
+.btn-reset-target {
+    color: var(--color-target);
+    background: rgba(0,0,0,0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.badge-tag {
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}

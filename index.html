@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación 1 - Pseudo-clases de Interacción y Navegación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container-fluid py-3">
+        <header class="row g-2 mb-2">
+            <nav class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 altura p-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-center h-100">
+                    <div class="header-brand">
+                        <span class="badge-tag"></span>
+                        <h4 class="mb-1 text-white">Soy Nav </h4>
+                        <small class="text-white-50"></small>
+                    </div>
+                    <ul class="nav-links d-flex gap-3 list-unstyled m-0 flex-wrap">
+                        <li><a href="#tarjeta-target" class="nav-btn demo-target-link"></a></li>
+                        <li><a href="https://sitio-ejemplo-no-visitado-12345.org" target="_blank" class="nav-btn demo-link"></a></li>
+                        <li><a href="" class="nav-btn demo-visited"></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 altura p-3">
+                <div class="d-flex flex-column justify-content-center h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h4 class="m-0 text-white">Soy Main</h4>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <div class="search-box p-3 rounded d-flex flex-wrap align-items-center gap-2">
+                        <label for="buscar" class="form-label text-white m-0 fw-semibold"></label>
+                        <input type="text" id="buscar" class="form-control form-control-sm custom-input flex-grow-1" placeholder="Haz clic aquí y mira cómo todo el bloque reacciona con :focus-within">
+                        <button class="btn btn-interactive btn-sm px-3"></button>
+                    </div>
+                </div>
+            </main>
+        </header>
+
+        <div class="row g-2">
+            <section class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0 text-white">Soy Section </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small text-white-50 m-0"><code></code>.</p>
+                    <div class="card-footer-mini"><span class="indicator"> </span></div>
+                </div>
+            </section>
+
+            <section id="tarjeta-target" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0 text-white">Soy Section </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small text-white-50 m-0"> <code></code>!</p>
+                    <a href="#" class="btn-reset-target small text-decoration-none"></a>
+                </div>
+            </section>
+
+            <aside class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between aside-focus-box">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0">Soy Aside </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small m-0"></p>
+                    <input type="text" class="form-control form-control-sm custom-input" placeholder="Haz clic dentro para iluminar el Aside">
+                </div>
+            </aside>
+
+            <section class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0 text-white">Soy Section </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small text-white-50 m-0"> <code>:active</code>.</p>
+                    <button class="btn btn-press w-100 py-2"></button>
+                </div>
+            </section>
+
+            <section class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0 text-white">Soy Section </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small text-white-50 m-0"><kbd>Tab</kbd> para activar el contorno de alta accesibilidad con <code>:focus-visible</code>.</p>
+                    <a href="#teclado" class="btn btn-keyboard w-100 py-1 text-center text-decoration-none"></a>
+                </div>
+            </section>
+
+            <aside class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 altura p-3">
+                <div class="block-card h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="m-0">Soy Aside </h5>
+                        <span class="badge-tag"></span>
+                    </div>
+                    <p class="small m-0"></p>
+                    <div class="badge-feedback py-1 text-center rounded"></div>
+                </div>
+            </aside>
+
+            <footer class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 altura p-3 text-center">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <span class="badge-tag mb-2"></span>
+                    <h4 class="m-0">Soy Footer</h4>
+                    <p class="small m-0 mt-1"></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
